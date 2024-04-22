@@ -256,15 +256,16 @@ int main(void)
 	printf("Copied string: %s\n", dst2);
 	printf("ORIG Length of copied string: %zu\n\n", result2);*/
     // STRTIM
-    //char	str[30] = " - + -   Hello Hive + ";
+    /*char	str[30] = " - + -   Hello Hive + ";
 	char	str1[] = "ALABAMA";
-	//char	trim[7] = " -+";
+	char	trim[7] = " -+";
 	char	trim1[] = "AA";
 	char	*result;
 
-	//result = ft_strtrim(str, trim);
-	//printf("%s\n", result);
+	result = ft_strtrim(str, trim);
+	printf("%s\n", result);
 	result = ft_strtrim(str1, trim1);
 	printf("%s\n", result);
-	free(result);
+	free(result);*/
+    // STRSPLIT
 }
