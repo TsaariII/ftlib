@@ -257,9 +257,9 @@ int main(void)
 	printf("ORIG Length of copied string: %zu\n\n", result2);*/
     // STRTIM
     //char	str[30] = " - + -   Hello Hive + ";
-	char	str1[5] = "BOB";
+	char	str1[5] = "ASIA";
 	//char	trim[7] = " -+";
-	char	trim1[7] = "B";
+	char	trim1[7] = "A";
 	char	*result;
 
 	//result = ft_strtrim(str, trim);

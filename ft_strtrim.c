@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 11:36:31 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 12:44:17 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 13:51:59 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,21 @@ char *ft_strtrim(char const *s1, char const *set)
 {
     size_t front;
     size_t back;
+    size_t trim_len;
     char *result;
 
     front = 0;
+    back = ft_strlen(s1) + 1;
     if (!s1 || !set)
         return(NULL);
-    back = ft_strlen(s1) + 1;
-    while (ft_strchr(set, s1[front]) && front <= back)
+    while (s1[front] != '\0' && ft_strchr(set, s1[front]) != '\0')
         front++;
-    if (front > back)
-        return(ft_strdup(""));
-    while (ft_strchr(set, s1[back] && back >= 0))
+    while (ft_strchr(set, s1[back - 1] != '\0' && back > front))
         back--;
-    result = (char *)malloc(sizeof(char) * (back - front + 2));
+    trim_len = back - front;
+    result = (char *)malloc(trim_len + 1);
     if (!result)
         return (NULL);
-    ft_strlcpy(result, &s1[front], back - front + 2);
+    ft_strlcpy(result, s1 + front, trim_len);
     return (result);
 }
