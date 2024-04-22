@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:45:23 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 11:00:32 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 12:01:16 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ char *ft_strdup(char *src);
 char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strnstr(const char *haystack, const char *needle, size_t num);
 char *ft_strrchr(const char *s, int c);
+char *ft_strtrim(char const *s1, char const *set);
 int ft_atoi(const char *str);
 int ft_isalnum(int ch);
 int ft_isalpha(int ch);

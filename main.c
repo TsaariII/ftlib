@@ -243,9 +243,28 @@ int main(void)
 	free(result8);
 	return 0;*/
     // STRJOIN
-    char *str1 = "trying to add to this ";
-    char *str2 = "THIS.";
-    char *joint = ft_strjoin(str1, str2);
-    printf("I'm %s", joint);
-    free(joint);
+    /*char dst[20];
+	char dst2[20];
+	const char *src = "Hello, World!";
+	size_t result;
+	size_t result2;
+	printf("Test case 1: Normal case\n");
+	result = ft_strlcpy(dst, src, sizeof(dst));
+	printf("Copied string: %s\n", dst);
+	printf("Length of copied string: %zu\n\n", result);
+	result2 = strlcpy(dst2, src, sizeof(dst2));
+	printf("Copied string: %s\n", dst2);
+	printf("ORIG Length of copied string: %zu\n\n", result2);*/
+    // STRTIM
+    //char	str[30] = " - + -   Hello Hive + ";
+	char	str1[5] = "BOB";
+	//char	trim[7] = " -+";
+	char	trim1[7] = "B";
+	char	*result;
+
+	//result = ft_strtrim(str, trim);
+	//printf("%s\n", result);
+	result = ft_strtrim(str1, trim1);
+	printf("%s\n", result);
+	free(result);
 }

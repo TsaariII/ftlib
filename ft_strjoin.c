@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:20:18 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 11:18:59 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 11:29:13 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ char *ft_strjoin(char const *s1, char const *s2)
         return (NULL);
     ft_strlcpy(str, s1, len);
     ft_strlcat(str, s2, len);
-    str[len] = '\0';
     return (str);
 }
