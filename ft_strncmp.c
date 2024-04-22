@@ -6,13 +6,13 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:58:37 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 14:48:03 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:14:32 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t num)
+int	ft_strncmp(char const *s1, char const *s2, size_t num)
 {
 	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2 && num - 1)
 	{

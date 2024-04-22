@@ -6,13 +6,13 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:37:51 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 14:49:07 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:14:43 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen(char const *str)
 {
 	size_t	length;
 

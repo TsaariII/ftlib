@@ -6,13 +6,13 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:00:29 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 14:50:45 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:14:56 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, char const *src, size_t size)
 {
 	size_t	s;
 	size_t	len_src;

@@ -6,13 +6,13 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:26:32 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 14:44:30 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:12:08 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(char const *s, int c)
 {
 	char	*ptr_s;
 	int		len;

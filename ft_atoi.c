@@ -6,11 +6,11 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 09:49:20 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 14:27:30 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:16:40 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	long	parser(const char *str, int neg)
+static	long	parser(char const *str, int neg)
 {
 	long	num;
 	long	temp;
@@ -30,7 +30,7 @@ static	long	parser(const char *str, int neg)
 	return (num);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char const *str)
 {
 	int		neg;
 	long	number;
