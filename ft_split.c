@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:09:31 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 16:10:49 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 17:07:22 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,51 @@ static	size_t	count_words(char const *s, char c)
 	return (count);
 }
 
+static void	free_array(char **array, size_t i)
+{
+	while (i > 0)
+	{
+		i--;
+		free(array[i]);
+	}
+	free(array);
+}
+
+static char	**helper(char const *s, char c, size_t i, char **result)
+{
+	char const	*start;
+	
+	while (*s)
+	{
+		if (*s && *s != c)
+		{
+			start = s;
+			while (*s && *s != c)
+				s++;
+			result[i] = (char *)malloc(sizeof(char) * (s - start + 1));
+			if(!result[i])
+			{
+				free_array(result, i);
+				return (NULL);
+			}
+			ft_strlcpy(result[i], start, s - start + 1);
+			i++;
+		}
+		while (*s && *s == c)
+			s++;
+	}
+	result[i] = NULL;
+	return (result);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	size_t	num_words;
-	size_t	len_substr;
-	size_t	index_w;
-	char	**split_array;
-	char const	
+	size_t	i;
+	char	**result;
+
+	i = 0;
+	result = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!s || !result)
+		return (NULL);
+	return (helper(s, c, i, result));
 }

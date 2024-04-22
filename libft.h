@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:45:23 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 16:17:36 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:46:34 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,13 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strnstr(char const *haystack, char const *needle, size_t num);
 char	*ft_strrchr(char const *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_atoi(char const *str);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 int		ft_isalnum(int ch);
 int		ft_isalpha(int ch);
-int		ft_isalpha(int ch);
+int		ft_isascii(int ch);
 int		ft_isdigit(int ch);
 int		ft_isprint(int ch);
 int		ft_memcmp(char *ptr1, char *ptr2, size_t num);
