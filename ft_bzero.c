@@ -6,21 +6,21 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:29:28 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 10:57:42 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 14:29:23 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *ptr, size_t num)
+void	ft_bzero(void *ptr, size_t num)
 {
-    unsigned char   *temp;
+	unsigned char	*temp;
 
-    temp = (unsigned char*)ptr;
-    while (num > 0)
-    {
-        *temp = 0;
-        temp++;
-        num--;
-    }
+	temp = (unsigned char *) ptr;
+	while (num > 0)
+	{
+		*temp = 0;
+		temp++;
+		num--;
+	}
 }

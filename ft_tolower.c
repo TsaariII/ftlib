@@ -6,14 +6,14 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:33:10 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 11:00:17 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 14:36:54 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
-{   
-    if (c >= 65 && c <= 90)
-        return (c + 32);
-    else
-        return (c);
+int	ft_tolower(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	else
+		return (c);
 }

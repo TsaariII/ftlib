@@ -6,34 +6,34 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:10:31 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 10:59:09 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 15:00:38 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t num)
+void	*ft_memmove(void *dest, const void *src, size_t num)
 {
-    unsigned char *t_dest;
-    unsigned char *t_src;
-    
-    t_dest = (unsigned char*)dest;
-    t_src = (unsigned char*)src;
-    if (!dest && !src)
-        return (0);
-    if (t_dest > t_src)
-    {
-        t_dest += num - 1;
-        t_src += num - 1;
-        while (num > 0)
-        {
-            *t_dest = *t_src;
-            t_dest--;
-            t_src--;
-            num--;
-        }
-    }
-    else
-        ft_memcpy(dest, src, num);
-    return (dest);
+	unsigned char	*t_dest;
+	unsigned char	*t_src;
+
+	t_dest = (unsigned char *) dest;
+	t_src = (unsigned char *) src;
+	if (!dest && !src)
+		return (0);
+	if (t_dest > t_src)
+	{
+		t_dest += num - 1;
+		t_src += num - 1;
+		while (num > 0)
+		{
+			*t_dest = *t_src;
+			t_dest--;
+			t_src--;
+			num--;
+		}
+	}
+	else
+		ft_memcpy(dest, src, num);
+	return (dest);
 }

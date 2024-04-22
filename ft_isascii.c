@@ -6,14 +6,14 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:05:34 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 10:57:35 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 15:07:55 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int ch)
+int	ft_isascii(int ch)
 {
-    if (ch >= 0 && ch <= 127)
-        return (1);
-    else
-        return (0);
+	if (ch >= 0 && ch <= 127)
+		return (1);
+	else
+		return (0);
 }

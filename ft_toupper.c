@@ -6,14 +6,14 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:07:27 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 11:00:21 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 14:35:06 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
-{   
-    if (c >= 97 && c <= 122)
-        return (c - 32);
-    else
-        return (c);
+int	ft_toupper(int c)
+{
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
 }

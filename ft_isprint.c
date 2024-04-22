@@ -6,14 +6,14 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:09:00 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 10:58:05 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 15:06:28 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int ch)
+int	ft_isprint(int ch)
 {
-    if (ch >= 33 && ch <= 126)
-        return (1);
-    else
-        return (0);
+	if (ch >= 33 && ch <= 126)
+		return (1);
+	else
+		return (0);
 }

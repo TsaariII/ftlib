@@ -6,14 +6,14 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:25:48 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 10:57:39 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/22 15:07:07 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int ch)
+int	ft_isdigit(int ch)
 {
-    if (ch >= 48 && ch <= 57)
-        return(1);
-    else
-        return (0);
+	if (ch >= 48 && ch <= 57)
+		return (1);
+	else
+		return (0);
 }
