@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:09:31 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 17:07:22 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/24 10:32:03 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static	size_t	count_words(char const *s, char c)
 	
 	in_word = 0;
 	count = 0;
+	if (!s)
+		return (0);
 	while(*s != '\0')
 	{
 		if (*s == c)
