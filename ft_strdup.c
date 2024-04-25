@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:52:47 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 14:55:59 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 13:58:20 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 char	*ft_strdup(char *src)
 {
 	char	*dup;
-	char	*ptr;
 	int		len;
+	int 	i;
 
+	i = 0;
 	len = ft_strlen(src);
-	dup = malloc(len);
+	dup = (char *)malloc(sizeof(char) * len + 1);
 	if (src == NULL || dup == NULL)
 		return (NULL);
-	ptr = dup;
-	while (*src)
+	while (src[i])
 	{
-		*dup = *src;
-		dup++;
-		src++;
+		dup[i] = src[i];
+		i++;
 	}
-	return (ptr);
+	dup[i] = '\0';
+	return (dup);
 }
