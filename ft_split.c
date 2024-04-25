@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:09:31 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/24 10:32:03 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/24 12:02:08 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,23 @@
 
 static	size_t	count_words(char const *s, char c)
 {
-	int		in_word;
-	size_t	count;
-	
-	in_word = 0;
-	count = 0;
+	size_t	words;
+
+	words = 0;
 	if (!s)
 		return (0);
-	while(*s != '\0')
+	while(*s)
 	{
-		if (*s == c)
-			in_word = 0;
-		else if (!in_word)
+		if (*s && *s != c)
 		{
-			in_word = 1;
-			count++;
+			words++;
+			while (*s && *s != c)
+				s++;
 		}
-		s++;
+		while (*s && *s == c)
+			s++;
 	}
-	return (count);
+	return (words);
 }
 
 static void	free_array(char **array, size_t i)
@@ -45,7 +43,7 @@ static void	free_array(char **array, size_t i)
 	free(array);
 }
 
-static char	**helper(char const *s, char c, size_t i, char **result)
+static char	**separator(char const *s, char c, size_t i, char **result)
 {
 	char const	*start;
 	
