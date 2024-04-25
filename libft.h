@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:45:23 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/25 16:45:36 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 16:54:44 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ char	*ft_strdup(char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strnstr(char const *haystack, char const *needle, size_t num);
 char	*ft_strrchr(char const *s, int c);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_atoi(char const *str);
