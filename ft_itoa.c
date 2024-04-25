@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 12:03:34 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/25 09:11:40 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 11:04:45 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	number_len(long nb)
 {
-	int count;
-	
+	int	count;
+
 	count = 0;
 	if (nb < 0)
 	{
@@ -35,7 +35,7 @@ char	*ft_itoa(int n)
 	char	*str;
 	long	num;
 	int		i;
-	
+
 	num = n;
 	i = number_len(num);
 	if (num == 0)

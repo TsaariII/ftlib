@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 11:36:31 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/24 09:16:02 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 11:07:43 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	while (front <= back && ft_strchr(set, s1[front]))
 		front++;
-	while (ft_strchr(set, s1[back])&& back >= 0)
+	while (ft_strchr(set, s1[back]) && back >= 0)
 		back--;
 	result = (char *)malloc(sizeof(char *) * (back - front + 2));
 	if (!result)

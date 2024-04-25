@@ -6,13 +6,13 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:09:00 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 15:06:28 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 11:26:17 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int ch)
 {
-	if (ch >= 33 && ch <= 126)
+	if (ch >= 32 && ch <= 126)
 		return (1);
 	else
 		return (0);

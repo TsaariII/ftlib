@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:09:31 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/24 12:02:08 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 11:06:42 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static	size_t	count_words(char const *s, char c)
 	words = 0;
 	if (!s)
 		return (0);
-	while(*s)
+	while (*s)
 	{
 		if (*s && *s != c)
 		{
@@ -46,7 +46,7 @@ static void	free_array(char **array, size_t i)
 static char	**separator(char const *s, char c, size_t i, char **result)
 {
 	char const	*start;
-	
+
 	while (*s)
 	{
 		if (*s && *s != c)
@@ -55,7 +55,7 @@ static char	**separator(char const *s, char c, size_t i, char **result)
 			while (*s && *s != c)
 				s++;
 			result[i] = (char *)malloc(sizeof(char) * (s - start + 1));
-			if(!result[i])
+			if (!result[i])
 			{
 				free_array(result, i);
 				return (NULL);
@@ -79,5 +79,5 @@ char	**ft_split(char const *s, char c)
 	result = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!s || !result)
 		return (NULL);
-	return (helper(s, c, i, result));
+	return (separator(s, c, i, result));
 }

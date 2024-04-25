@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:45:23 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 16:46:34 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 11:01:03 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ft_isascii(int ch);
 int		ft_isdigit(int ch);
 int		ft_isprint(int ch);
 int		ft_memcmp(char *ptr1, char *ptr2, size_t num);
-int		ft_strncmp(char *s1, char *s2, size_t num);
+int		ft_strncmp(char const *s1, char const *s2, size_t num);
 void	ft_bzero(void *ptr, size_t num);
 void	*ft_calloc(size_t num_elem, size_t elem_size);
 void	*ft_memchr(void const *ptr, int ch, size_t num);
