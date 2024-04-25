@@ -6,45 +6,27 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 09:49:20 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 16:16:40 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 13:49:51 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	long	parser(char const *str, int neg)
-{
-	long	num;
-	long	temp;
-
-	num = 0;
-	temp = 0;
-	while (*str > 47 && *str < 58)
-	{
-		temp = num;
-		num = num * 10 + (*str - '0');
-		if (neg == 1 && temp > num)
-			return (-1);
-		else if (neg == -1 && temp > num)
-			return (0);
-		str++;
-	}
-	return (num);
-}
-
 int	ft_atoi(char const *str)
 {
-	int		neg;
-	long	number;
+	int	i;
+	int	p_n;
+	int	num;
 
-	number = 0;
-	neg = 1;
-	while (*str == 8 || *str == 14 || *str == 32)
-		str++;
-	if (*str == '+' || *str == '-')
-	{
-		if (*str == '-')
-			neg = -1;
-		str++;
-	}
-	number = parser(str, neg);
-	return ((int)(number * neg));
+	i = 0;
+	p_n = 1;
+	num = 0;
+	if (str[i] == 0)
+		return(0);
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+		if (str[i++] == '-')
+			p_n = -1;
+	while (str[i] >= '0' && str[i] <= '9')
+		num = (num * 10 + (str[i++] - '0'));
+	return (num * p_n);
 }
