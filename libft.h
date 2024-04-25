@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:45:23 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/25 16:24:20 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 16:45:36 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 
 char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
 char	*ft_strchr(char const *s, int c);
 char	*ft_strdup(char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
