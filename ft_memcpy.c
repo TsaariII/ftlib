@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:47:04 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/25 12:23:24 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 15:16:27 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, void const *src, size_t n)
 
 	tdest = (unsigned char *) dest;
 	tsrc = (unsigned char *) src;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	while (n > 0)
 	{
 		*tdest = *tsrc;

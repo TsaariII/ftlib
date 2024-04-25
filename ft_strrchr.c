@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:26:32 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/25 12:43:48 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 15:49:10 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,19 @@
 char	*ft_strrchr(char const *s, int c)
 {
 	char	*ptr_s;
-	int		len;
+	char	ch;
+	int		i;
 
 	ptr_s = (char *)s;
-	len = ft_strlen(s);
-	while (len >= 0)
+	ch = (char)c;
+	i = 0;
+	while (ptr_s[i] != '\0')
+		i++;
+	while (i >= 0)
 	{
-		if (ptr_s[len] == c)
-			return (&(ptr_s[len]));
-		len--;
+		if (ptr_s[i] == ch)
+			return (&ptr_s[i]);
+		i--;
 	}
 	return (NULL);
 }

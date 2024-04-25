@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:52:47 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/25 13:58:20 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:58:19 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(char *src)
 {
 	char	*dup;
 	int		len;
-	int 	i;
+	int		i;
 
 	i = 0;
 	len = ft_strlen(src);
