@@ -36,7 +36,8 @@ SRC		= ft_atoi.c\
 		ft_toupper.c
 
 BONUS_SRCS	= ft_lstnew_bonus.c\
-			ft_lstadd_front_bonus.c
+			ft_lstadd_front_bonus.c\
+			ft_lstsize_bonus.c
 
 OBJS	= $(SRC:.c=.o)
 
