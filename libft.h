@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:45:23 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/26 13:57:10 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/26 14:09:44 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 typedef struct s_list
 {
 	void			*content;
-	struct s_list *next;
+	struct s_list	*next;
 }	t_list;
 
 char	*ft_itoa(int n);
