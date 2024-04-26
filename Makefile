@@ -56,11 +56,11 @@ AR		= ar rcs
 
 CC		= cc
 
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -g
 
 all:	$(NAME)
 
-.c.o:
+%.o: %.c
 		$(CC) $(CFLAGS) -c -I $(HEAD) $< -o $@
 
 $(NAME):	$(OBJS)
