@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:45:23 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/26 10:48:54 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/26 12:20:34 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 typedef struct s_list
 {
-void *content;
-struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list *next;
+}	t_list;
 
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
@@ -42,6 +42,10 @@ int		ft_isdigit(int ch);
 int		ft_isprint(int ch);
 int		ft_memcmp(char *ptr1, char *ptr2, size_t num);
 int		ft_strncmp(char const *s1, char const *s2, size_t num);
+size_t	ft_strlcat(char *dest, char const *src, size_t size);
+size_t	ft_strlcpy(char *dest, char const *src, size_t size);
+size_t	ft_strlen(char const *str);
+t_list	*ft_lstnew(void *content);
 void	ft_bzero(void *ptr, size_t num);
 void	*ft_calloc(size_t num_elem, size_t elem_size);
 void	*ft_memchr(void const *ptr, int ch, size_t num);
@@ -52,7 +56,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-size_t	ft_strlcat(char *dest, char const *src, size_t size);
-size_t	ft_strlcpy(char *dest, char const *src, size_t size);
-size_t	ft_strlen(char const *str);
+
 #endif

@@ -35,9 +35,11 @@ SRC		= ft_atoi.c\
 		ft_tolower.c\
 		ft_toupper.c
 
-#BONUS_SRCS	=
+BONUS_SRCS	= ft_lstnew_bonus.c\
 
 OBJS	= $(SRC:.c=.o)
+
+BONUS_OBJS	= $(BONUS_SRC:.c=.o)
 
 HEAD	= ./libft.h
 
@@ -53,8 +55,12 @@ all:	$(NAME)
 		$(CC) $(CFLAGS) -c -I $(HEAD) $< -o $@
 $(NAME):	$(OBJS)
 				$(AR) $(NAME) $(OBJS)
+bonus:	.bonus
+.bonus: $(OBJS) $(BONUS_OBJS)
+		@touch .bonus;
+		$(AR) $(NAME) $(BONUS_OBJS)
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS) .bonus
 
 fclean:	clean
 			rm -f $(NAME)
