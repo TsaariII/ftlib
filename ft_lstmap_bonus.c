@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:23:21 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/26 17:05:26 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:25:56 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_l;
 	t_list	*new_n;
 	void	*set;
-	
+
 	if (!lst || !f || !del)
 		return (NULL);
 	while (lst)
