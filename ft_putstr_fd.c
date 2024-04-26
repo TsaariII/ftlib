@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:57:32 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/26 10:12:12 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/26 10:29:29 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
+	if (s != NULL)
 	{
-		write(fd, &s, 1);
+		write(fd, s, ft_strlen(s));
 	}
 }

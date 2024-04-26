@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:45:23 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/26 09:56:07 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/26 10:14:16 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t num);
 void	*ft_memmove(void *dest, const void *src, size_t num);
 void	*ft_memset(void *ptr, int value, size_t num);
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 size_t	ft_strlcat(char *dest, char const *src, size_t size);
 size_t	ft_strlcpy(char *dest, char const *src, size_t size);
