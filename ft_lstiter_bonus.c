@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:01:18 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/26 16:02:02 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/26 16:09:18 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
