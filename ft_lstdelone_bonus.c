@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:33:27 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/26 15:34:14 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:37:58 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
+	lst = NULL;
 }
