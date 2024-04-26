@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:45:23 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/26 16:01:57 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/26 16:42:35 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ size_t	ft_strlcat(char *dest, char const *src, size_t size);
 size_t	ft_strlcpy(char *dest, char const *src, size_t size);
 size_t	ft_strlen(char const *str);
 t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 void	ft_bzero(void *ptr, size_t num);
 void	*ft_calloc(size_t num_elem, size_t elem_size);
@@ -60,6 +61,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t num);
 void	*ft_memmove(void *dest, const void *src, size_t num);
 void	*ft_memset(void *ptr, int value, size_t num);
 void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
