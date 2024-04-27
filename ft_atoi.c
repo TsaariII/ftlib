@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 09:49:20 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/25 14:57:58 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/27 11:45:46 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,15 @@ int	ft_atoi(char const *str)
 	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
-		if (str[i++] == '-')
+	{
+		if (str[i] == '-')
 			p_n = -1;
+		i++;
+	}
 	while (str[i] >= '0' && str[i] <= '9')
-		num = (num * 10 + (str[i++] - '0'));
+	{
+		num = (num * 10 + (str[i] - '0'));
+		i++;
+	}
 	return (num * p_n);
 }
