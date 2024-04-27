@@ -6,7 +6,7 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 12:03:34 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/25 11:04:45 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/27 13:07:04 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ char	*ft_itoa(int n)
 	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (str == 0)
 		return (0);
-	str[i--] = '\0';
+	str[i] = '\0';
+	i--;
 	if (num < 0)
 	{
 		str[0] = '-';
@@ -51,8 +52,9 @@ char	*ft_itoa(int n)
 	}
 	while (num > 0)
 	{
-		str[i--] = 48 + (num % 10);
+		str[i] = 48 + (num % 10);
 		num = num / 10;
+		i--;
 	}
 	return (str);
 }
