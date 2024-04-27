@@ -6,13 +6,13 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 10:11:24 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 15:08:28 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/27 12:52:09 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int ch)
 {
-	if ((ch >= 97 && ch <= 122) || (ch >= 65 && ch <= 90))
+	if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
 		return (1);
 	else
 		return (0);
