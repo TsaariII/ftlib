@@ -6,14 +6,14 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 09:58:32 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/22 15:12:56 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/27 12:50:59 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int ch)
 {
-	if ((ch >= 48 && ch <= 57) || (ch >= 65 && ch <= 90) || \
-		(ch >= 97 && ch <= 122))
+	if ((ch >= '0' && ch <= '9') || (ch >= 'A' && ch <= 'Z') || \
+		(ch >= 'a' && ch <= 'z'))
 		return (1);
 	else
 		return (0);
