@@ -6,13 +6,12 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:49:16 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/30 12:24:38 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/30 14:03:26 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-
+#include <stdint.h>
 void	*ft_calloc(size_t num_elem, size_t elem_size)
 {
 	void	*mem;
