@@ -6,42 +6,37 @@
 /*   By: nzharkev <nzharkev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 09:49:20 by nzharkev          #+#    #+#             */
-/*   Updated: 2024/04/30 12:09:54 by nzharkev         ###   ########.fr       */
+/*   Updated: 2024/04/30 14:53:36 by nzharkev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	check_space(int n)
-{
-	if (n == ' ' || (n >= '\t' && n <= '\r'))
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_atoi(char const *str)
 {
-	int		i;
-	int		p_n;
-	long	num;
+	int			p_n;
+	long long	num;
+	long long	check;
 
-	i = 0;
 	p_n = 1;
 	num = 0;
-	while (check_space(*str))
+	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
 		str++;
-	if (str[i] == '-' || str[i] == '+')
+	if (*str == '-' || *str == '+')
 	{
-		if (str[i] == '-')
+		if (*str == '-')
 			p_n = -1;
-		i++;
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str && ft_isdigit(*str))
 	{
-		num = ((num * 10) + p_n * (str[i] - 48));
-		if (p_n == 1 && num < 0)
+		check = num * 10 + *str - 48;
+		if (check / 10 != num && p_n == 1)
 			return (-1);
-		else if (p_n == -1 && num > 0)
+		if (check / 10 != num && p_n == -1)
 			return (0);
-		i++;
+		num = check;
+		str++;
 	}
-	return ((int)(num));
+	return ((int)num * p_n);
 }
